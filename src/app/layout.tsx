@@ -11,8 +11,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Abhinav Dash | AI Engineer & Automation Specialist",
-  description: "Portfolio of Abhinav Dash - AI Engineer & Automation Specialist turning ideas into scalable systems.",
+  title: "Abhinav Dash | Founder & AI Engineer",
+  description: "Portfolio of Abhinav Dash - Founder of Tech Magnitude, AI Engineer & Automation Specialist turning ideas into scalable systems.",
 };
 
 export default function RootLayout({
@@ -24,8 +24,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${jakarta.variable} h-full antialiased font-sans`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#050505] text-white selection:bg-white/20 relative">
+      <body className="min-h-full flex flex-col bg-[#050505] text-white selection:bg-white/20 relative" suppressHydrationWarning>
         <ParticleBackground />
         <SmoothScroll>
           <Navbar />

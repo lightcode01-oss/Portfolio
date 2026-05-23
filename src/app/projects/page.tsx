@@ -2,6 +2,12 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useState } from 'react';
+import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+
+const GithubIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+);
 
 // Custom 3D Tilt Component
 function TiltCard({ children, className }: { children: React.ReactNode, className?: string }) {
@@ -43,36 +49,48 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
 
 const projects = [
   { 
-    title: "AI---WORKPLACE", 
+    title: "AI Workspace", 
+    slug: "ai-workspace",
     category: "AI & ML",
     tech: ["TypeScript", "AI Workflows", "Automation"], 
     description: "A specialized TypeScript workplace focused on AI algorithm implementation, intelligent workflows, and system integration.",
     bg: "from-indigo-500/20 to-purple-500/20",
-    accent: "text-indigo-400"
+    accent: "text-indigo-400",
+    github: "https://github.com/lightcode01-oss/AI---WORKPLACE",
+    live: null // No live link, goes to dynamic case study
   },
   { 
-    title: "GDG_HACKATHON", 
+    title: "GDG Hackathon Core", 
+    slug: "gdg-hackathon",
     category: "Full Stack",
     tech: ["JavaScript", "Web Tech"], 
     description: "Developed a high-impact solution during the GDG Hackathon focusing on real-world scalability and modern UI/UX design.",
     bg: "from-blue-500/20 to-cyan-500/20",
-    accent: "text-blue-400"
+    accent: "text-blue-400",
+    github: "https://github.com/lightcode01-oss/GDG_HACKATHON",
+    live: null
   },
   { 
-    title: "ESP-32-Project", 
+    title: "ESP-32 Automata", 
+    slug: "esp-32-project",
     category: "Automation",
     tech: ["C++", "Hardware", "IoT"], 
     description: "Hardware integration project using ESP-32 for real-time automation, smart control systems, and IoT communication.",
     bg: "from-emerald-500/20 to-teal-500/20",
-    accent: "text-emerald-400"
+    accent: "text-emerald-400",
+    github: "https://github.com/lightcode01-oss/ESP-32-Project",
+    live: null
   },
   { 
-    title: "Data Structures & Algorithms", 
+    title: "Optimized DSA Vault", 
+    slug: "dsa-vault",
     category: "Core Tech",
     tech: ["C++", "Java", "Optimization"], 
-    description: "Comprehensive Data Structures and Algorithms repositories (CPP-C-DSA & JAVA-Sem-2-LAB) implementing optimized core concepts.",
+    description: "Comprehensive Data Structures and Algorithms repositories implementing optimized core concepts in C++ and Java.",
     bg: "from-orange-500/20 to-pink-500/20",
-    accent: "text-orange-400"
+    accent: "text-orange-400",
+    github: "https://github.com/lightcode01-oss/CPP-C-DSA",
+    live: null
   },
 ];
 
@@ -83,29 +101,29 @@ export default function ProjectsPage() {
   const filteredProjects = projects.filter(p => activeFilter === "All" || p.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-7xl mx-auto">
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="space-y-6 mb-16 relative z-10"
+        className="space-y-6 mb-20 relative z-10"
       >
         <div className="flex items-center gap-4">
           <span className="h-px bg-white/20 w-12 sm:w-24"></span>
           <span className="text-blue-400 font-mono tracking-[0.2em] uppercase text-sm">GitHub Archive</span>
         </div>
-        <h1 className="text-5xl md:text-[6rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-300 to-zinc-600 leading-[1.1]">
+        <h1 className="text-6xl md:text-[8rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-300 to-zinc-600 leading-[1.1]">
           Featured Projects
         </h1>
       </motion.div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-4 mb-16 relative z-10">
+      <div className="flex flex-wrap gap-4 mb-20 relative z-10">
         {filters.map(filter => (
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeFilter === filter ? 'bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.2)]' : 'bg-white/[0.03] text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'}`}
+            className={`px-8 py-4 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${activeFilter === filter ? 'bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.2)]' : 'bg-white/[0.03] text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'}`}
           >
             {filter}
           </button>
@@ -114,33 +132,55 @@ export default function ProjectsPage() {
 
       {/* Project Grid */}
       <div style={{ perspective: 1200 }} className="relative z-10">
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <motion.div layout className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {filteredProjects.map((p) => (
-            <TiltCard key={p.title} className="h-[400px] md:h-[480px]">
+            <TiltCard key={p.title} className="h-[500px] md:h-[550px]">
               <motion.div 
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
-                className="group relative overflow-hidden rounded-[2rem] flex flex-col h-full bg-[#0a0a0a] border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:border-white/30 shadow-2xl"
+                className="group relative overflow-hidden rounded-[3rem] flex flex-col h-full bg-[#0a0a0a] border border-white/5 transition-all duration-500 hover:-translate-y-4 hover:border-white/30 shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
-                <div className={`absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b ${p.bg} opacity-50 group-hover:opacity-80 transition-opacity duration-500 blur-2xl z-0 pointer-events-none`} />
+                <div className={`absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b ${p.bg} opacity-50 group-hover:opacity-80 transition-opacity duration-500 blur-3xl z-0 pointer-events-none`} />
                 
-                <div style={{ transform: "translateZ(40px)" }} className="relative z-10 flex-1 p-8 md:p-12 flex flex-col justify-between h-full bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent">
+                <div style={{ transform: "translateZ(40px)" }} className="relative z-10 flex-1 p-10 md:p-14 flex flex-col justify-between h-full bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent">
                   <div>
-                    <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-4 block">{p.category}</span>
-                    <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-100 group-hover:text-white transition-colors">{p.title}</h3>
-                    <p className="text-zinc-400 text-sm md:text-base leading-relaxed max-w-lg">{p.description}</p>
+                    <span className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-6 block">{p.category}</span>
+                    <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-zinc-100 group-hover:text-white transition-colors">{p.title}</h3>
+                    <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">{p.description}</p>
+                    
+                    <div className="flex flex-wrap items-center gap-3 mt-8">
+                      {p.tech.map(t => (
+                        <span key={t} className={`${p.accent} font-mono text-xs uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5`}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap items-center gap-3 mt-8">
-                    {p.tech.map(t => (
-                      <span key={t} className={`${p.accent} font-mono text-xs uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5`}>
-                        {t}
-                      </span>
-                    ))}
+
+                  {/* Dual Action Buttons */}
+                  <div className="flex items-center gap-4 mt-8 pt-8 border-t border-white/5">
+                    <a 
+                      href={p.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl font-semibold transition-all border border-white/5"
+                    >
+                      <GithubIcon />
+                      Source Code
+                    </a>
+                    <Link 
+                      href={p.live || `/projects/${p.slug}`}
+                      className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white text-black hover:bg-zinc-200 rounded-2xl font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      Visit Website
+                    </Link>
                   </div>
+
                 </div>
               </motion.div>
             </TiltCard>
