@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import Navbar from "@/components/Navbar";
+import ParticleBackground from "@/components/ParticleBackground";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
@@ -26,11 +23,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${jakarta.variable} h-full antialiased font-sans`}
     >
-      <body className="min-h-full flex flex-col bg-[#050505] text-white">
+      <body className="min-h-full flex flex-col bg-[#050505] text-white selection:bg-white/20 relative">
+        <ParticleBackground />
         <SmoothScroll>
-          {children}
+          <Navbar />
+          <main className="relative z-10 flex-1">
+            {children}
+          </main>
         </SmoothScroll>
       </body>
     </html>
