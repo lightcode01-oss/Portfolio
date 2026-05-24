@@ -34,7 +34,7 @@ export default function Hero3D() {
   }, [mouseX, mouseY]);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-hidden pt-20">
       
       {/* Background Gradients & Light Orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -90,6 +90,7 @@ export default function Hero3D() {
                   src="/profile.jpg" 
                   alt="Abhinav Dash" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
                   priority
                 />

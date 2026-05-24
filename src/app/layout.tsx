@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} h-full antialiased font-sans`}
+      className={`${jakarta.variable} antialiased font-sans bg-[#050505]`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#050505] text-white selection:bg-white/20 relative" suppressHydrationWarning>
+      <body className="flex flex-col text-white selection:bg-white/20 relative" suppressHydrationWarning>
         <ParticleBackground />
         <SmoothScroll>
           <Navbar />

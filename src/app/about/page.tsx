@@ -38,7 +38,7 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       className={`relative ${className}`}
     >
-      <div style={{ transform: "translateZ(30px)" }} className="w-full h-full">
+      <div style={{ transform: "translateZ(30px)" }} className="relative w-full h-full">
         {children}
       </div>
     </motion.div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto overflow-hidden">
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto overflow-x-hidden">
       
       {/* Massive Split Header */}
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-32 relative z-10">
@@ -86,6 +86,7 @@ export default function AboutPage() {
               src="/profile.jpg" 
               alt="Abhinav Dash - Founder" 
               fill 
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover relative z-0 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-110" 
             />
             <div className="absolute inset-0 border-[2px] border-white/5 rounded-[3rem] z-20 pointer-events-none" />
