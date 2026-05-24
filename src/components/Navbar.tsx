@@ -49,7 +49,8 @@ export default function Navbar() {
               <span className="text-white font-bold text-sm">AD</span>
             </div>
             <span className="font-semibold text-lg tracking-tight text-white group-hover:text-zinc-300 transition-colors">
-              TechMagnitude
+              ABHINAV DASH
+              <p className="text-xs font-normal opacity-70 mt-1 position-absolute">TECH MAGNITUDE</p>
             </span>
           </Link>
 
