@@ -48,9 +48,9 @@ export default function Navbar() {
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-emerald-500 flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-shadow">
               <span className="text-white font-bold text-sm">AD</span>
             </div>
-            <span className="font-semibold text-lg tracking-tight text-white group-hover:text-zinc-300 transition-colors">
+            <span className="font-semibold text-lg tracking-tight text-white group-hover:text-zinc-400 transition-colors">
               ABHINAV DASH
-              <p className="text-xs font-normal opacity-70 mt-1 position-absolute">TECH MAGNITUDE</p>
+              <p className="text-xs font-normal opacity-70 mt-1">TECH MAGNITUDE © 2026</p>
             </span>
           </Link>
 

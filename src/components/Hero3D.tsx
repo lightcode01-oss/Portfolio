@@ -121,6 +121,20 @@ export default function Hero3D() {
               <div className="px-6 py-2.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 backdrop-blur-md flex items-center gap-3 shadow-[0_0_30px_rgba(52,211,153,0.15)]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
                 <span className="text-xs md:text-sm font-mono tracking-[0.2em] text-zinc-300 uppercase mt-0.5">
+                  Bachelor of Computer Applications (BCA) <span className="text-emerald-400/50 mx-2">|</span> <strong className="text-white tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">4 - YEAR</strong>
+                </span>
+              </div>
+              <span className="h-[2px] w-8 md:w-16 bg-gradient-to-l from-transparent to-emerald-500 rounded-full opacity-50" />
+            </motion.div>
+
+            <motion.div
+              style={{ transform: "translateZ(50px)" }}
+              className="mt-10 flex items-center justify-center gap-4"
+            >
+              <span className="h-[2px] w-8 md:w-16 bg-gradient-to-r from-transparent to-emerald-500 rounded-full opacity-50" />
+              <div className="px-6 py-2.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 backdrop-blur-md flex items-center gap-3 shadow-[0_0_30px_rgba(52,211,153,0.15)]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+                <span className="text-xs md:text-sm font-mono tracking-[0.2em] text-zinc-300 uppercase mt-0.5">
                   Founder <span className="text-emerald-400/50 mx-2">|</span> <strong className="text-white tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">TECH MAGNITUDE</strong>
                 </span>
               </div>

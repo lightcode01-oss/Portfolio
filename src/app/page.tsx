@@ -24,11 +24,11 @@ export default function Home() {
   return (
     <main className="relative w-full overflow-x-hidden">
       <PageLoader />
-      
+
       <div ref={containerRef} className="relative w-full">
         {/* The Fixed Canvas Background */}
         <ScrollyCanvas progress={scrollYProgress} />
-        
+
         {/* 1. The Hero Content */}
         <div className="relative w-full h-[150vh]">
           <div className="sticky top-0 w-full min-h-screen flex flex-col justify-center pointer-events-none z-10">
@@ -44,12 +44,12 @@ export default function Home() {
 
       {/* 3. The Full Page Content Array */}
       <div className="relative z-20 bg-[#050505] shadow-[0_-20px_50px_rgba(0,0,0,0.8)] border-t border-white/10">
-          <Skills />
-          <Projects />
-          <Agency />
-          <Founder />
-          <Achievements />
-          <Contact />
+        <Skills />
+        <Projects />
+        <Agency />
+        <Founder />
+        <Achievements />
+        <Contact />
       </div>
     </main>
   );

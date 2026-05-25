@@ -13,7 +13,7 @@ const GithubIcon = () => (
 function TiltCard({ children, className }: { children: React.ReactNode, className?: string }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  
+
   const mouseXSpring = useSpring(x, { stiffness: 150, damping: 20 });
   const mouseYSpring = useSpring(y, { stiffness: 150, damping: 20 });
 
@@ -48,45 +48,48 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
 }
 
 const projects = [
-  { 
-    title: "AI Workspace", 
+  {
+    title: "AI Workspace",
     slug: "ai-workspace",
-    category: "AI & ML",
-    tech: ["TypeScript", "AI Workflows", "Automation"], 
-    description: "A specialized TypeScript workplace focused on AI algorithm implementation, intelligent workflows, and system integration.",
+    category: "AI Infrastructure",
+    tech: ["TypeScript", "Next.js", "AI Workflows", "Automation", "Node.js"],
+    description: "Enterprise-focused AI workspace built for intelligent workflow orchestration, AI-powered automation pipelines, scalable system integration, and real-time operational efficiency.",
     bg: "from-indigo-500/20 to-purple-500/20",
     accent: "text-indigo-400",
     github: "https://github.com/lightcode01-oss/AI---WORKPLACE",
-    live: null // No live link, goes to dynamic case study
+    live: null
   },
-  { 
-    title: "GDG Hackathon Core", 
+
+  {
+    title: "GDG Hackathon Core",
     slug: "gdg-hackathon",
-    category: "Full Stack",
-    tech: ["JavaScript", "Web Tech"], 
-    description: "Developed a high-impact solution during the GDG Hackathon focusing on real-world scalability and modern UI/UX design.",
+    category: "Full Stack Engineering",
+    tech: ["JavaScript", "React", "Modern Web Tech", "APIs"],
+    description: "Built a scalable hackathon solution focused on modern UI/UX, rapid deployment, real-world usability, and seamless third-party API integrations under high-pressure development timelines.",
     bg: "from-blue-500/20 to-cyan-500/20",
     accent: "text-blue-400",
     github: "https://github.com/lightcode01-oss/GDG_HACKATHON",
     live: null
   },
-  { 
-    title: "ESP-32 Automata", 
+
+  {
+    title: "ESP-32 Automata",
     slug: "esp-32-project",
-    category: "Automation",
-    tech: ["C++", "Hardware", "IoT"], 
-    description: "Hardware integration project using ESP-32 for real-time automation, smart control systems, and IoT communication.",
+    category: "IoT & Automation",
+    tech: ["C++", "ESP-32", "IoT", "Hardware Systems"],
+    description: "Real-time IoT automation system using ESP-32 for smart device communication, automation workflows, sensor integration, and wireless operational control.",
     bg: "from-emerald-500/20 to-teal-500/20",
     accent: "text-emerald-400",
     github: "https://github.com/lightcode01-oss/ESP-32-Project",
     live: null
   },
-  { 
-    title: "Optimized DSA Vault", 
+
+  {
+    title: "Optimized DSA Vault",
     slug: "dsa-vault",
-    category: "Core Tech",
-    tech: ["C++", "Java", "Optimization"], 
-    description: "Comprehensive Data Structures and Algorithms repositories implementing optimized core concepts in C++ and Java.",
+    category: "Core Engineering",
+    tech: ["C++", "Java", "DSA", "Algorithm Optimization"],
+    description: "Advanced repository of optimized Data Structures and Algorithms implementations focused on performance engineering, problem-solving efficiency, and scalable computational logic.",
     bg: "from-orange-500/20 to-pink-500/20",
     accent: "text-orange-400",
     github: "https://github.com/lightcode01-oss/CPP-C-DSA",
@@ -135,7 +138,7 @@ export default function ProjectsPage() {
         <motion.div layout className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {filteredProjects.map((p) => (
             <TiltCard key={p.title} className="h-[500px] md:h-[550px]">
-              <motion.div 
+              <motion.div
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -145,13 +148,13 @@ export default function ProjectsPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-0 pointer-events-none" />
                 <div className={`absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b ${p.bg} opacity-50 group-hover:opacity-80 transition-opacity duration-500 blur-3xl z-0 pointer-events-none`} />
-                
+
                 <div style={{ transform: "translateZ(40px)" }} className="relative z-10 flex-1 p-10 md:p-14 flex flex-col justify-between h-full bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent">
                   <div>
                     <span className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-6 block">{p.category}</span>
                     <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-zinc-100 group-hover:text-white transition-colors">{p.title}</h3>
                     <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">{p.description}</p>
-                    
+
                     <div className="flex flex-wrap items-center gap-3 mt-8">
                       {p.tech.map(t => (
                         <span key={t} className={`${p.accent} font-mono text-xs uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5`}>
@@ -163,16 +166,16 @@ export default function ProjectsPage() {
 
                   {/* Dual Action Buttons */}
                   <div className="flex items-center gap-4 mt-8 pt-8 border-t border-white/5">
-                    <a 
-                      href={p.github} 
-                      target="_blank" 
+                    <a
+                      href={p.github}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl font-semibold transition-all border border-white/5"
                     >
                       <GithubIcon />
                       Source Code
                     </a>
-                    <Link 
+                    <Link
                       href={p.live || `/projects/${p.slug}`}
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white text-black hover:bg-zinc-200 rounded-2xl font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                     >
