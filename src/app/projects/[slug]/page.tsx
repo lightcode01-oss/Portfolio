@@ -69,73 +69,74 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ slug:
     challenges: "N/A",
     icon: null
   };
-}
-return (
-  <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-5xl mx-auto">
-    <Link href="/projects" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12">
-      <ArrowLeft className="w-5 h-5" />
-      Back to Projects
-    </Link>
 
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="flex items-center gap-6 mb-8">
-        <div className="p-4 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
-          {projectData.icon}
-        </div>
-        <div>
-          <span className="text-sm font-mono text-zinc-500 uppercase tracking-widest">{projectData.category}</span>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white mt-2">
-            {projectData.title}
-          </h1>
-        </div>
-      </div>
 
-      <div className="flex flex-wrap items-center gap-4 mb-16 pb-12 border-b border-white/10">
-        <a
-          href={projectData.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-8 py-4 bg-white text-black hover:bg-zinc-200 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
-        >
-          <GithubIcon />
-          View Source on GitHub
-        </a>
-        <span className="px-6 py-4 bg-blue-500/10 text-blue-400 rounded-full font-semibold border border-blue-500/20">
-          Live Deployment: Pending
-        </span>
-      </div>
+  return (
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-5xl mx-auto">
+      <Link href="/projects" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12">
+        <ArrowLeft className="w-5 h-5" />
+        Back to Projects
+      </Link>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-        <div className="md:col-span-2 space-y-12">
-          <section>
-            <h2 className="text-2xl font-bold text-white mb-6">Overview</h2>
-            <p className="text-zinc-400 text-lg leading-relaxed">{projectData.description}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-white mb-6">Challenges Overcome</h2>
-            <p className="text-zinc-400 text-lg leading-relaxed">{projectData.challenges}</p>
-          </section>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="flex items-center gap-6 mb-8">
+          <div className="p-4 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
+            {projectData.icon}
+          </div>
+          <div>
+            <span className="text-sm font-mono text-zinc-500 uppercase tracking-widest">{projectData.category}</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white mt-2">
+              {projectData.title}
+            </h1>
+          </div>
         </div>
 
-        <div>
-          <div className="p-8 bg-white/[0.02] border border-white/5 rounded-3xl sticky top-32">
-            <h3 className="text-xl font-bold text-white mb-6">Tech Stack</h3>
-            <div className="flex flex-col gap-3">
-              {projectData.tech.map(t => (
-                <span key={t} className="px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-zinc-300 font-medium">
-                  {t}
-                </span>
-              ))}
+        <div className="flex flex-wrap items-center gap-4 mb-16 pb-12 border-b border-white/10">
+          <a
+            href={projectData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-4 bg-white text-black hover:bg-zinc-200 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          >
+            <GithubIcon />
+            View Source on GitHub
+          </a>
+          <span className="px-6 py-4 bg-blue-500/10 text-blue-400 rounded-full font-semibold border border-blue-500/20">
+            Live Deployment: Pending
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="md:col-span-2 space-y-12">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-6">Overview</h2>
+              <p className="text-zinc-400 text-lg leading-relaxed">{projectData.description}</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-6">Challenges Overcome</h2>
+              <p className="text-zinc-400 text-lg leading-relaxed">{projectData.challenges}</p>
+            </section>
+          </div>
+
+          <div>
+            <div className="p-8 bg-white/[0.02] border border-white/5 rounded-3xl sticky top-32">
+              <h3 className="text-xl font-bold text-white mb-6">Tech Stack</h3>
+              <div className="flex flex-col gap-3">
+                {projectData.tech.map(t => (
+                  <span key={t} className="px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-zinc-300 font-medium">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.div>
-  </div>
-);
+      </motion.div>
+    </div>
+  );
 }
