@@ -78,15 +78,25 @@ export default function AgencyPage() {
             </div>
           </div>
 
-          <div className="flex-1 flex flex-col justify-center items-center p-8 bg-[#0a0a0a] rounded-[2rem] border border-white/5 text-center relative overflow-hidden">
+          <div className="flex-1 flex flex-col justify-center items-center p-8 md:p-12 bg-[#0a0a0a] rounded-[2rem] border border-white/5 text-center relative overflow-hidden">
              <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none" />
-             <p className="text-zinc-400 font-mono text-sm tracking-[0.2em] uppercase mb-4 relative z-10">Estimated Monthly Savings</p>
-             <div className="text-6xl md:text-[5rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 relative z-10">
+             <p className="text-zinc-400 font-mono text-xs sm:text-sm tracking-[0.2em] uppercase mb-4 relative z-10">Estimated Monthly Savings</p>
+             <motion.div 
+               key={monthlyMoneySaved}
+               initial={{ opacity: 0, y: -20 }}
+               animate={{ opacity: 1, y: 0 }}
+               className="text-5xl md:text-[5rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 relative z-10"
+             >
                ${monthlyMoneySaved.toLocaleString()}
-             </div>
-             <p className="text-blue-400 mt-4 font-medium relative z-10">
+             </motion.div>
+             <motion.p 
+               key={monthlyHoursSaved}
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               className="text-blue-400 mt-4 font-medium relative z-10"
+             >
                +{monthlyHoursSaved} Hours Recovered
-             </p>
+             </motion.p>
           </div>
         </div>
       </motion.div>
@@ -112,6 +122,23 @@ export default function AgencyPage() {
           </motion.div>
         ))}
       </div>
+
+      {/* Call to Action CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mt-32 max-w-4xl mx-auto text-center relative z-10"
+      >
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to supercharge your business?</h2>
+        <a 
+          href="/contact" 
+          className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+        >
+          Book a Consultation
+        </a>
+      </motion.div>
     </div>
   );
 }

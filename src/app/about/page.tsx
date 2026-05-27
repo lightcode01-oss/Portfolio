@@ -2,6 +2,8 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FileText, ArrowRight } from 'lucide-react';
 
 // Custom 3D Tilt Component
 function TiltCard({ children, className }: { children: React.ReactNode, className?: string }) {
@@ -88,6 +90,7 @@ export default function AboutPage() {
               fill 
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover relative z-0 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-110" 
+              style={{ objectPosition: "center 15%" }}
             />
             <div className="absolute inset-0 border-[2px] border-white/5 rounded-[3rem] z-20 pointer-events-none" />
           </TiltCard>
@@ -127,7 +130,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Core Philosophy */}
+      {/* Core Philosophy & Call to Action */}
       <div style={{ perspective: 1200 }}>
         <TiltCard className="mt-40 mb-20">
           <motion.div 
@@ -135,12 +138,36 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="p-16 md:p-32 rounded-[4rem] bg-gradient-to-b from-blue-900/10 to-transparent border border-blue-500/20 relative overflow-hidden shadow-[0_0_100px_rgba(59,130,246,0.1)] text-center flex justify-center"
+            className="p-12 md:p-24 lg:p-32 rounded-[4rem] bg-gradient-to-b from-emerald-900/20 via-[#0a0a0a] to-transparent border border-emerald-500/20 relative overflow-hidden shadow-[0_0_100px_rgba(16,185,129,0.1)] text-center flex flex-col items-center justify-center gap-12"
           >
-            <div className="absolute inset-0 bg-grid-white opacity-[0.03] pointer-events-none" />
+            <div className="absolute inset-0 bg-grid-white opacity-[0.02] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
+            
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight max-w-5xl tracking-tight text-balance relative z-10">
               "My long-term goal is to build intelligent AI ecosystems and next-generation autonomous platforms that transform how businesses and people interact with technology."
             </h3>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 relative z-10">
+              <Link 
+                href="/resume.pdf" 
+                target="_blank"
+                className="group relative flex items-center justify-center gap-3 px-8 py-4 bg-emerald-500 text-black font-semibold rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95 w-full sm:w-auto"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <FileText size={20} />
+                  View Resume
+                </span>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
+              </Link>
+              
+              <Link 
+                href="/contact" 
+                className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/5 text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto"
+              >
+                <span>Get in Touch</span>
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </motion.div>
         </TiltCard>
       </div>

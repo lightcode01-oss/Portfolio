@@ -49,52 +49,71 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
 
 const projects = [
   {
-    title: "AI Workspace",
-    slug: "ai-workspace",
-    category: "AI Infrastructure",
-    tech: ["TypeScript", "Next.js", "AI Workflows", "Automation", "Node.js"],
-    description: "Enterprise-focused AI workspace built for intelligent workflow orchestration, AI-powered automation pipelines, scalable system integration, and real-time operational efficiency.",
+    title: "NEXUS OS — Autonomous AI Company Operating System",
+    slug: "nexus-os",
+    category: "AI & ML",
+    tech: ["Python", "FastAPI", "Next.js", "AI Agents"],
+    description: "Designed and architected an enterprise-grade multi-agent AI operating system capable of managing autonomous AI employees, workflow execution, intelligent task delegation, memory systems, and real-world business automation pipelines.",
     bg: "from-indigo-500/20 to-purple-500/20",
     accent: "text-indigo-400",
-    github: "https://github.com/lightcode01-oss/AI---WORKPLACE",
+    github: "https://github.com/lightcode01-oss/NEXUS-OS",
     live: null
   },
-
   {
-    title: "GDG Hackathon Core",
-    slug: "gdg-hackathon",
-    category: "Full Stack Engineering",
-    tech: ["JavaScript", "React", "Modern Web Tech", "APIs"],
-    description: "Built a scalable hackathon solution focused on modern UI/UX, rapid deployment, real-world usability, and seamless third-party API integrations under high-pressure development timelines.",
+    title: "AI Workflow Automation System",
+    slug: "ai-workflow-automation",
+    category: "Automation",
+    tech: ["n8n", "LLMs", "AI Agents", "Workflows"],
+    description: "Built advanced AI automation workflows for client outreach, intelligent messaging, follow-ups, and operational automation using AI-driven response generation and multi-node execution systems.",
+    bg: "from-violet-500/20 to-fuchsia-500/20",
+    accent: "text-violet-400",
+    github: "https://github.com/lightcode01-oss/AI-Workflow",
+    live: null
+  },
+  {
+    title: "AI-Powered Food Delivery Ecosystem",
+    slug: "food-delivery-ecosystem",
+    category: "Full Stack",
+    tech: ["Next.js", "Node.js", "Socket.IO", "AI Systems"],
+    description: "Developed a scalable food delivery ecosystem integrating AI meal recommendations, real-time order tracking, cloud kitchen workflows, contactless delivery systems, live chat support, and eco-friendly operational infrastructure.",
     bg: "from-blue-500/20 to-cyan-500/20",
     accent: "text-blue-400",
-    github: "https://github.com/lightcode01-oss/GDG_HACKATHON",
+    github: "https://github.com/lightcode01-oss/Food-Delivery",
     live: null
   },
-
   {
-    title: "ESP-32 Automata",
-    slug: "esp-32-project",
-    category: "IoT & Automation",
-    tech: ["C++", "ESP-32", "IoT", "Hardware Systems"],
-    description: "Real-time IoT automation system using ESP-32 for smart device communication, automation workflows, sensor integration, and wireless operational control.",
+    title: "AI SaaS Subscription & Access Control Platform",
+    slug: "ai-saas-platform",
+    category: "Full Stack",
+    tech: ["Next.js", "Firebase", "Authentication", "Payments"],
+    description: "Created a secure SaaS infrastructure with subscription management, premium AI feature access control, payment integration, user authentication, and scalable permission-based system architecture.",
     bg: "from-emerald-500/20 to-teal-500/20",
     accent: "text-emerald-400",
-    github: "https://github.com/lightcode01-oss/ESP-32-Project",
+    github: "https://github.com/lightcode01-oss/AI-SaaS",
     live: null
   },
-
   {
-    title: "Optimized DSA Vault",
-    slug: "dsa-vault",
-    category: "Core Engineering",
-    tech: ["C++", "Java", "DSA", "Algorithm Optimization"],
-    description: "Advanced repository of optimized Data Structures and Algorithms implementations focused on performance engineering, problem-solving efficiency, and scalable computational logic.",
+    title: "Educational Content Automation System",
+    slug: "edtech-automation",
+    category: "Automation",
+    tech: ["Python", "OCR", "PDF Automation", "EdTech"],
+    description: "Developed AI-assisted educational systems for generating structured notes, previous-year questions, formula roadmaps, and academic resources focused on scalable learning workflows and exam preparation.",
     bg: "from-orange-500/20 to-pink-500/20",
     accent: "text-orange-400",
-    github: "https://github.com/lightcode01-oss/CPP-C-DSA",
+    github: "https://github.com/lightcode01-oss/EdTech-Automation",
     live: null
   },
+  {
+    title: "AI Chatbot Platform with Monetization",
+    slug: "ai-chatbot-monetization",
+    category: "AI & ML",
+    tech: ["AI APIs", "Payment", "SaaS Logic", "Custom UI"],
+    description: "Built a customizable AI chatbot platform with integrated payment systems, premium feature unlocking, user-based access control, and scalable monetization infrastructure for AI-powered applications.",
+    bg: "from-rose-500/20 to-red-500/20",
+    accent: "text-rose-400",
+    github: "https://github.com/lightcode01-oss/AI-Chatbot",
+    live: null
+  }
 ];
 
 const filters = ["All", "AI & ML", "Automation", "Full Stack", "Core Tech"];

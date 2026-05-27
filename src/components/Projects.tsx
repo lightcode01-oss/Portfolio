@@ -1,56 +1,74 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
     {
-      title: "NEXUS OS — Autonomous AI Company Operating System",
-      tech: "Python, FastAPI, Next.js, TypeScript, LangChain, OpenAI APIs, Supabase, PostgreSQL, Docker, AI Agents",
-      description: "Designed and architected an enterprise-grade multi-agent AI operating system capable of managing autonomous AI employees, workflow execution, intelligent task delegation, memory systems, and real-world business automation pipelines.",
+      title: "AI Workspace",
+      slug: "ai-workspace",
+      tech: "TypeScript, Next.js, Node.js, AI Workflows, Automation Systems",
+      description:
+        "Developed an AI-focused workspace designed for workflow automation, intelligent system integration, scalable backend operations, and AI-driven process execution using modern TypeScript architecture.",
       bg: "from-indigo-500/20 to-purple-500/20",
-      accent: "text-indigo-400"
+      accent: "text-indigo-400",
+      githubUrl: "https://github.com/lightcode01-oss/AI---WORKPLACE",
+      liveUrl: ""
     },
 
     {
-      title: "AI Workflow Automation System",
-      tech: "n8n, LLMs, API Integrations, AI Agents, Workflow Nodes",
-      description: "Built advanced AI automation workflows for client outreach, intelligent messaging, follow-ups, and operational automation using AI-driven response generation and multi-node execution systems.",
+      title: "Automation Workflows",
+      slug: "n8n-workflows",
+      tech: "n8n, APIs, Workflow Automation, AI Agents, Integrations",
+      description:
+        "Built advanced workflow automation pipelines using n8n for API integrations, automated operations, intelligent execution flows, and scalable business automation systems.",
       bg: "from-violet-500/20 to-fuchsia-500/20",
-      accent: "text-violet-400"
+      accent: "text-violet-400",
+      githubUrl: "https://github.com/lightcode01-oss/techmagnitude_n8nworkflows",
+      liveUrl: ""
     },
 
     {
-      title: "AI-Powered Food Delivery Ecosystem",
-      tech: "Next.js, Node.js, MongoDB, Socket.IO, AI Recommendation Systems, Real-Time APIs",
-      description: "Developed a scalable food delivery ecosystem integrating AI meal recommendations, real-time order tracking, cloud kitchen workflows, contactless delivery systems, live chat support, and eco-friendly operational infrastructure.",
+      title: "Food Delivery Platform",
+      slug: "food-delivery-platform",
+      tech: "HTM, CSS , SCSS, Java Script, Python",
+      description:
+        "Developed a modern food delivery platform featuring responsive frontend architecture, scalable backend integration, real-time operational workflows, and optimized user experience systems.",
       bg: "from-blue-500/20 to-cyan-500/20",
-      accent: "text-blue-400"
+      accent: "text-blue-400",
+      githubUrl: "https://github.com/lightcode01-oss/foods-delivery",
+      liveUrl: ""
     },
 
     {
-      title: "AI SaaS Subscription & Access Control Platform",
-      tech: "Next.js, Firebase, Node.js, Authentication Systems, Payment Gateway APIs",
-      description: "Created a secure SaaS infrastructure with subscription management, premium AI feature access control, payment integration, user authentication, and scalable permission-based system architecture.",
+      title: "GDG Hackathon Project",
+      slug: "gdg-hackathon-project",
+      tech: "JavaScript, React, APIs, Modern Web Technologies",
+      description:
+        "Built a scalable hackathon solution focused on modern UI/UX, frontend responsiveness, real-world functionality, and efficient API integration under rapid development timelines.",
+      bg: "from-sky-500/20 to-blue-500/20",
+      accent: "text-sky-400",
+      githubUrl: "https://github.com/lightcode01-oss/GDG_HACKATHON",
+      liveUrl: ""
+    },
+
+    {
+      title: "ESP-32 IoT Automation System",
+      slug: "esp32-iot-automation",
+      tech: "C++, ESP-32, IoT, Hardware Automation, Embedded Systems",
+      description:
+        "Created an ESP-32 based automation system for real-time device communication, IoT operations, wireless control systems, and smart hardware integration workflows.",
       bg: "from-emerald-500/20 to-teal-500/20",
-      accent: "text-emerald-400"
+      accent: "text-emerald-400",
+      githubUrl: "https://github.com/lightcode01-oss/ESP-32-Project",
+      liveUrl: ""
     },
 
-    {
-      title: "Educational Content Automation System",
-      tech: "Python, AI Content Structuring, OCR Systems, PDF Automation, EdTech Workflows",
-      description: "Developed AI-assisted educational systems for generating structured notes, previous-year questions, formula roadmaps, and academic resources focused on scalable learning workflows and exam preparation.",
-      bg: "from-orange-500/20 to-pink-500/20",
-      accent: "text-orange-400"
-    },
 
-    {
-      title: "AI Chatbot Platform with Monetization",
-      tech: "Custom UI, AI APIs, Payment Integration, Authentication, SaaS Logic",
-      description: "Built a customizable AI chatbot platform with integrated payment systems, premium feature unlocking, user-based access control, and scalable monetization infrastructure for AI-powered applications.",
-      bg: "from-rose-500/20 to-red-500/20",
-      accent: "text-rose-400"
-    },
+
   ];
+
 
   return (
     <section className="relative w-full py-32 bg-[#050505] px-6 sm:px-12 z-20 overflow-hidden text-white border-t border-white/5">
@@ -91,9 +109,24 @@ export default function Projects() {
                 <div className="flex items-center justify-between mt-8">
                   <p className={`${p.accent} font-mono text-xs uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5`}>{p.tech}</p>
 
-                  <button className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300 pointer-events-auto">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="12 5 19 5 19 12"></polyline></svg>
-                  </button>
+                  <div className="flex gap-3 pointer-events-auto">
+                    <Link
+                      href={p.githubUrl || '/404'}
+                      target={p.githubUrl ? "_blank" : "_self"}
+                      className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
+                      title="Source Code"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </Link>
+                    <Link
+                      href={p.liveUrl || '/404'}
+                      target={p.liveUrl ? "_blank" : "_self"}
+                      className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
+                      title="Live Demo"
+                    >
+                      <ExternalLink size={20} strokeWidth={2} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>
