@@ -18,6 +18,18 @@ export default function Projects() {
     },
 
     {
+      title: "Web-3eventmanagement",
+      slug: "Web-3 Tech",
+      tech: "TypeScript, Next.js, Node.js, Solidity, Python, Web3_Sockets, Web3_Auth02",
+      description:
+        "Built multiple frontend interface experiments focused on Event Managements Using Web3 Chain Management, modern Web3 backend which connects with Digital currency wallets, interactive web3 Event Management experiences.",
+      bg: "from-cyan-500/20 to-slate-500/20",
+      accent: "text-cyan-400",
+      githubUrl: "https://github.com/lightcode01-oss/CrowdChainWeb-3eventmanagement",
+      liveUrl: "https://crowd-chain-web-3eventmanagement-29.vercel.app/"
+    }
+
+    {
       title: "Automation Workflows",
       slug: "n8n-workflows",
       tech: "n8n, APIs, Workflow Automation, AI Agents, Integrations",
@@ -25,7 +37,7 @@ export default function Projects() {
         "Built advanced workflow automation pipelines using n8n for API integrations, automated operations, intelligent execution flows, and scalable business automation systems.",
       bg: "from-violet-500/20 to-fuchsia-500/20",
       accent: "text-violet-400",
-      githubUrl: "https://github.com/lightcode01-oss/techmagnitude_n8nworkflows",
+      githubUrl: "https://github.com/lightcode01-oss/AI_Workflow",
       liveUrl: ""
     },
 
@@ -38,7 +50,7 @@ export default function Projects() {
       bg: "from-blue-500/20 to-cyan-500/20",
       accent: "text-blue-400",
       githubUrl: "https://github.com/lightcode01-oss/foods-delivery",
-      liveUrl: ""
+      liveUrl: "https://lightcode01-oss.github.io/foods-delivery/"
     },
 
     {
@@ -50,7 +62,7 @@ export default function Projects() {
       bg: "from-sky-500/20 to-blue-500/20",
       accent: "text-sky-400",
       githubUrl: "https://github.com/lightcode01-oss/GDG_HACKATHON",
-      liveUrl: ""
+      liveUrl: "https://gdg-hackathon-alpha.vercel.app/"
     },
 
     {
