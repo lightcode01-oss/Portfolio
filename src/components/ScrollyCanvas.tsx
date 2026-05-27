@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTransform, MotionValue, useMotionValue } from 'framer-motion';
+import { useTransform, MotionValue, useMotionValue, useSpring } from 'framer-motion';
 
 const FRAME_COUNT = 192;
 const currentFrame = (index: number) => `/sequence/frame_${index.toString().padStart(3, '0')}_delay-0.041s.png`;
@@ -23,7 +23,8 @@ export default function ScrollyCanvas({ progress }: { progress: MotionValue<numb
 
   const fallbackProgress = useMotionValue(0);
   const activeProgress = progress || fallbackProgress;
-  const frameIndex = useTransform(activeProgress, [0, 1], [0, FRAME_COUNT - 1]);
+  const smoothProgress = useSpring(activeProgress, { stiffness: 50, damping: 20, mass: 1 });
+  const frameIndex = useTransform(smoothProgress, [0, 1], [0, FRAME_COUNT - 1]);
 
   useEffect(() => {
     // Initial draw

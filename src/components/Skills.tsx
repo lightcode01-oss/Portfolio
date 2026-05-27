@@ -5,7 +5,7 @@ export default function Skills() {
   const categories = [
     {
       title: "Core Technologies",
-      skills: ["C++", "Java", "SQL", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "AWS", "Node.js", "HTML", "CSS", "React", "Python"],
+      skills: ["C++", "Java", "SQL", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "AWS", "Node.js", "HTML", "CSS", "React", "Python", "Solidity"],
       accent: "group-hover:text-blue-400",
       border: "group-hover:border-blue-500/50",
       glow: "bg-blue-500/10"

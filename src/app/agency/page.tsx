@@ -12,7 +12,12 @@ export default function AgencyPage() {
   const monthlyMoneySaved = monthlyHoursSaved * hourlyRate;
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-7xl mx-auto">
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-7xl mx-auto relative">
+      
+      {/* Animated Background Blobs */}
+      <div className="absolute top-10 left-1/4 w-[600px] h-[400px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" style={{ animationDelay: '3s' }} />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -134,7 +134,12 @@ export default function ProjectsPage() {
   const filteredProjects = projects.filter(p => activeFilter === "All" || p.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto">
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto relative">
+      
+      {/* Animated Background Blobs */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" style={{ animationDelay: '2s' }} />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -206,7 +211,7 @@ export default function ProjectsPage() {
                       Source Code
                     </a>
                     <Link
-                      href={p.live || `/projects/${p.slug}`}
+                      href={p.live || '/deployment-pending'}
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white text-black hover:bg-zinc-200 rounded-2xl font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                     >
                       <ExternalLink className="w-5 h-5" />

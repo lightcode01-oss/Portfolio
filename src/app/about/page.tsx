@@ -56,7 +56,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto overflow-x-hidden">
+    <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto overflow-x-hidden relative">
+
+      {/* Animated Background Blobs */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" />
+      <div className="absolute top-40 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-40 left-1/3 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" style={{ animationDelay: '4s' }} />
 
       {/* Massive Split Header */}
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-32 relative z-10">
