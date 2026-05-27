@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import ParticleBackground from "@/components/ParticleBackground";
 import Contact from "@/components/Contact";
+import NextTopLoader from 'nextjs-toploader';
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -28,6 +29,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex flex-col text-white selection:bg-white/20 relative" suppressHydrationWarning>
+        <NextTopLoader 
+          color="#10b981" 
+          height={3} 
+          showSpinner={false} 
+          easing="ease"
+          speed={200}
+        />
         <ParticleBackground />
         <SmoothScroll>
           <Navbar />
