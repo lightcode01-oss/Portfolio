@@ -27,7 +27,7 @@ export default function Projects() {
       accent: "text-cyan-400",
       githubUrl: "https://github.com/lightcode01-oss/CrowdChainWeb-3eventmanagement",
       liveUrl: "https://crowd-chain-web-3eventmanagement-29.vercel.app/"
-    }
+    },
 
     {
       title: "Automation Workflows",
