@@ -211,7 +211,7 @@ export default function ProjectsPage() {
                       Source Code
                     </a>
                     <Link
-                      href={p.live || '/deployment-pending'}
+                      href={p.live || `/projects/${p.slug}`}
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white text-black hover:bg-zinc-200 rounded-2xl font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                     >
                       <ExternalLink className="w-5 h-5" />

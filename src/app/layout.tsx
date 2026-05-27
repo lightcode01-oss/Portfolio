@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import ParticleBackground from "@/components/ParticleBackground";
+import Contact from "@/components/Contact";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -33,6 +34,7 @@ export default function RootLayout({
           <main className="relative z-10 flex-1">
             {children}
           </main>
+          <Contact />
         </SmoothScroll>
       </body>
     </html>

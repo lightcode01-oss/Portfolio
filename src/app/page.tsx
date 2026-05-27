@@ -12,7 +12,6 @@ import Skills from "@/components/Skills";
 import Agency from "@/components/Agency";
 import Founder from "@/components/Founder";
 import Achievements from "@/components/Achievements";
-import Contact from "@/components/Contact";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,7 +48,6 @@ export default function Home() {
         <Agency />
         <Founder />
         <Achievements />
-        <Contact />
       </div>
     </main>
   );
