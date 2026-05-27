@@ -3,20 +3,45 @@ import { motion } from 'framer-motion';
 
 export default function Agency() {
   const services = [
-    "AI Workflow Automation", "Chatbot Development", "Lead Generation Systems",
-    "Email Automation", "Business Process Automation", "Custom AI Solutions"
+    "Website Development",
+    "AI Workflow Automation",
+    "WhatsApp Automation",
+    "Business Branding",
+    "Social Media Design",
+    "Landing Page Design",
+    "Chatbot Development",
+    "CRM Setup",
+    "UI/UX Design",
+    "Custom AI Solutions"
   ];
-  
-  const clients = ["Startups", "Small Businesses", "Freelancers", "Content Creators"];
-  const whyChoose = ["Automation-first approach", "Real-world problem solving", "Scalable systems", "Cost-effective solutions", "Fast implementation"];
+
+  const clients = [
+    "Startups",
+    "Local Businesses",
+    "Growing Brands",
+    "Freelancers",
+    "Content Creators",
+    "Business Owners"
+  ];
+
+  const whyChoose = [
+    "Automation-First Approach",
+    "Modern & Responsive Designs",
+    "Real-World Problem Solving",
+    "Scalable Digital Solutions",
+    "Fast Project Delivery",
+    "Cost-Effective Services",
+    "Strong Branding Focus",
+    "Ongoing Support & Maintenance"
+  ];
 
   return (
     <section className="relative w-full py-32 bg-[#050505] px-6 sm:px-12 z-20 overflow-hidden text-white border-y border-white/5">
       <div className="max-w-7xl mx-auto space-y-32">
-        
+
         {/* Intro */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -32,7 +57,7 @@ export default function Agency() {
               "Scaling Businesses with AI & Automation"
             </p>
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -50,7 +75,7 @@ export default function Agency() {
 
         {/* Services & Clients */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -68,8 +93,8 @@ export default function Agency() {
               ))}
             </ul>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -88,7 +113,7 @@ export default function Agency() {
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -109,7 +134,7 @@ export default function Agency() {
         </div>
 
         {/* Vision */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}

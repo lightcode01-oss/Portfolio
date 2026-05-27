@@ -49,69 +49,80 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
 
 const projects = [
   {
-    title: "NEXUS OS — Autonomous AI Company Operating System",
-    slug: "nexus-os",
+    title: "AI Workspace",
+    slug: "ai-workspace",
     category: "AI & ML",
-    tech: ["Python", "FastAPI", "Next.js", "AI Agents"],
-    description: "Designed and architected an enterprise-grade multi-agent AI operating system capable of managing autonomous AI employees, workflow execution, intelligent task delegation, memory systems, and real-world business automation pipelines.",
+    tech: ["TypeScript", "Next.js", "Node.js", "AI Workflows", "Automation"],
+    description:
+      "Developed an AI-focused workspace designed for workflow automation, intelligent system integration, scalable backend operations, and AI-driven process execution using modern TypeScript architecture.",
     bg: "from-indigo-500/20 to-purple-500/20",
     accent: "text-indigo-400",
-    github: "https://github.com/lightcode01-oss/NEXUS-OS",
+    github: "https://github.com/lightcode01-oss/AI---WORKPLACE",
     live: null
   },
+
   {
-    title: "AI Workflow Automation System",
-    slug: "ai-workflow-automation",
+    title: "CrowdChain Web3 Event Management",
+    slug: "web3-event-management",
+    category: "Core Tech",
+    tech: ["TypeScript", "Next.js", "Solidity", "Python", "Web3"],
+    description:
+      "Built a decentralized Web3 event management platform integrating blockchain authentication, smart contracts, wallet connectivity, decentralized ticket validation, and secure event operations.",
+    bg: "from-cyan-500/20 to-slate-500/20",
+    accent: "text-cyan-400",
+    github: "https://github.com/lightcode01-oss/CrowdChainWeb-3eventmanagement",
+    live: "https://crowd-chain-web-3eventmanagement-29.vercel.app/"
+  },
+
+  {
+    title: "Automation Workflows",
+    slug: "automation-workflows",
     category: "Automation",
-    tech: ["n8n", "LLMs", "AI Agents", "Workflows"],
-    description: "Built advanced AI automation workflows for client outreach, intelligent messaging, follow-ups, and operational automation using AI-driven response generation and multi-node execution systems.",
+    tech: ["n8n", "Workflow Automation", "AI Agents", "APIs", "Integrations"],
+    description:
+      "Built advanced workflow automation pipelines using n8n for API integrations, intelligent task execution, operational automation, and scalable business workflow systems.",
     bg: "from-violet-500/20 to-fuchsia-500/20",
     accent: "text-violet-400",
-    github: "https://github.com/lightcode01-oss/AI-Workflow",
+    github: "https://github.com/lightcode01-oss/AI_Workflow",
     live: null
   },
+
   {
-    title: "AI-Powered Food Delivery Ecosystem",
-    slug: "food-delivery-ecosystem",
+    title: "Food Delivery Platform",
+    slug: "food-delivery-platform",
     category: "Full Stack",
-    tech: ["Next.js", "Node.js", "Socket.IO", "AI Systems"],
-    description: "Developed a scalable food delivery ecosystem integrating AI meal recommendations, real-time order tracking, cloud kitchen workflows, contactless delivery systems, live chat support, and eco-friendly operational infrastructure.",
+    tech: ["HTML", "CSS", "SCSS", "JavaScript", "Python"],
+    description:
+      "Developed a responsive food delivery platform featuring scalable frontend architecture, optimized user experience systems, and integrated backend operational workflows.",
     bg: "from-blue-500/20 to-cyan-500/20",
     accent: "text-blue-400",
-    github: "https://github.com/lightcode01-oss/Food-Delivery",
-    live: null
+    github: "https://github.com/lightcode01-oss/foods-delivery",
+    live: "https://lightcode01-oss.github.io/foods-delivery/"
   },
+
   {
-    title: "AI SaaS Subscription & Access Control Platform",
-    slug: "ai-saas-platform",
+    title: "GDG Hackathon Project",
+    slug: "gdg-hackathon-project",
     category: "Full Stack",
-    tech: ["Next.js", "Firebase", "Authentication", "Payments"],
-    description: "Created a secure SaaS infrastructure with subscription management, premium AI feature access control, payment integration, user authentication, and scalable permission-based system architecture.",
+    tech: ["JavaScript", "React", "APIs", "Web Technologies"],
+    description:
+      "Built a scalable hackathon solution focused on responsive frontend systems, modern UI/UX, real-world usability, and seamless API integrations under rapid development timelines.",
+    bg: "from-sky-500/20 to-blue-500/20",
+    accent: "text-sky-400",
+    github: "https://github.com/lightcode01-oss/GDG_HACKATHON",
+    live: "https://gdg-hackathon-alpha.vercel.app/"
+  },
+
+  {
+    title: "ESP-32 IoT Automation System",
+    slug: "esp32-iot-automation",
+    category: "AI & ML",
+    tech: ["C++", "ESP-32", "IoT", "Embedded Systems", "Hardware Automation"],
+    description:
+      "Created an ESP-32 based automation system for smart device communication, wireless operational control, IoT workflows, and real-time hardware automation systems.",
     bg: "from-emerald-500/20 to-teal-500/20",
     accent: "text-emerald-400",
-    github: "https://github.com/lightcode01-oss/AI-SaaS",
-    live: null
-  },
-  {
-    title: "Educational Content Automation System",
-    slug: "edtech-automation",
-    category: "Automation",
-    tech: ["Python", "OCR", "PDF Automation", "EdTech"],
-    description: "Developed AI-assisted educational systems for generating structured notes, previous-year questions, formula roadmaps, and academic resources focused on scalable learning workflows and exam preparation.",
-    bg: "from-orange-500/20 to-pink-500/20",
-    accent: "text-orange-400",
-    github: "https://github.com/lightcode01-oss/EdTech-Automation",
-    live: null
-  },
-  {
-    title: "AI Chatbot Platform with Monetization",
-    slug: "ai-chatbot-monetization",
-    category: "AI & ML",
-    tech: ["AI APIs", "Payment", "SaaS Logic", "Custom UI"],
-    description: "Built a customizable AI chatbot platform with integrated payment systems, premium feature unlocking, user-based access control, and scalable monetization infrastructure for AI-powered applications.",
-    bg: "from-rose-500/20 to-red-500/20",
-    accent: "text-rose-400",
-    github: "https://github.com/lightcode01-oss/AI-Chatbot",
+    github: "https://github.com/lightcode01-oss/ESP-32-Project",
     live: null
   }
 ];

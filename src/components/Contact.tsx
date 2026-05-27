@@ -9,19 +9,19 @@ export default function Contact() {
 
       <div className="max-w-4xl w-full relative z-10">
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="h-px bg-white/20 w-12"></span>
             <span className="text-zinc-400 font-mono tracking-[0.2em] uppercase text-sm">Next Steps</span>
             <span className="h-px bg-white/20 w-12"></span>
           </div>
-          
+
           <h2 className="text-5xl md:text-[5rem] font-extrabold tracking-tighter mb-8 leading-[1.1] text-balance">
-            Let's build something <br/>
+            Let's build something <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 inline-block mt-2 drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">
               extraordinary.
             </span>
@@ -32,7 +32,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,23 +46,42 @@ export default function Contact() {
             Email Me
           </a>
           <a
-            href="https://linkedin.com/in/[placeholder]"
+            href="www.linkedin.com/in/abhinav-dash-92033b267"
             target="_blank" rel="noreferrer"
             className="px-8 py-4 bg-[#0a0a0a] text-white font-semibold rounded-full border border-white/10 hover:bg-white/[0.05] transition-all hover:border-white/30 backdrop-blur-xl hover:scale-105 active:scale-95 duration-300"
           >
             LinkedIn
           </a>
           <a
-            href="https://github.com/[placeholder]"
+            href="https://github.com/lightcode01-oss"
             target="_blank" rel="noreferrer"
             className="px-8 py-4 bg-[#0a0a0a] text-white font-semibold rounded-full border border-white/10 hover:bg-white/[0.05] transition-all hover:border-white/30 backdrop-blur-xl hover:scale-105 active:scale-95 duration-300 flex items-center gap-2"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
             GitHub
           </a>
+
+          <a
+            href="https://www.instagram.com/techmagnitude.ai?igsh=bmt6ZTdiM2k2YWFi"
+            target="_blank" rel="noreferrer"
+            className="px-8 py-4 bg-[#0a0a0a] text-white font-semibold rounded-full border border-white/10 hover:bg-white/[0.05] transition-all hover:border-white/30 backdrop-blur-xl hover:scale-105 active:scale-95 duration-300 flex items-center gap-2"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Instagram
+          </a>
+
+          <a
+            href="https://youtube.com/@techmagnitude?si=L67w_8chGe6Yo4Xf"
+            target="_blank" rel="noreferrer"
+            className="px-8 py-4 bg-[#0a0a0a] text-white font-semibold rounded-full border border-white/10 hover:bg-white/[0.05] transition-all hover:border-white/30 backdrop-blur-xl hover:scale-105 active:scale-95 duration-300 flex items-center gap-2"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Youtube
+          </a>
+
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

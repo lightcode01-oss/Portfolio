@@ -13,60 +13,79 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ slug:
   const { slug } = use(params);
 
   const projectData = {
-    "nexus-os": {
-      title: "NEXUS OS — Autonomous AI Company Operating System",
+    "ai-workspace": {
+      title: "AI Workspace",
       category: "AI & ML",
-      description: "Designed and architected an enterprise-grade multi-agent AI operating system capable of managing autonomous AI employees, workflow execution, intelligent task delegation, memory systems, and real-world business automation pipelines.",
-      tech: ["Python", "FastAPI", "Next.js", "AI Agents", "Supabase", "Docker"],
+      description:
+        "Developed an AI-focused workspace designed for workflow automation, intelligent system integration, scalable backend operations, and AI-driven process execution using modern TypeScript architecture.",
+      tech: ["TypeScript", "Next.js", "Node.js", "AI Workflows", "Automation"],
       github: "https://github.com/lightcode01-oss/AI---WORKPLACE",
-      challenges: "Architecting a highly scalable multi-agent system where independent AI modules can communicate seamlessly without race conditions or memory leaks.",
+      challenges:
+        "Building scalable AI workflow systems capable of handling asynchronous task execution, real-time processing, and modular backend communication without impacting application performance.",
       icon: <Cpu className="w-12 h-12 text-indigo-400" />
     },
-    "ai-workflow-automation": {
-      title: "AI Workflow Automation System",
+
+    "web3-event-management": {
+      title: "CrowdChain Web3 Event Management",
+      category: "Blockchain",
+      description:
+        "Built a decentralized Web3 event management platform integrating wallet authentication, blockchain-based event registration, smart contract interaction, digital ticket validation, and secure decentralized event operations.",
+      tech: ["TypeScript", "Next.js", "Solidity", "Python", "Web3", "Smart Contracts"],
+      github: "https://github.com/lightcode01-oss/CrowdChainWeb-3eventmanagement",
+      challenges:
+        "Managing secure blockchain wallet authentication, smart contract deployment, and reliable Web3 transaction handling across multiple decentralized workflows.",
+      icon: <Server className="w-12 h-12 text-cyan-400" />
+    },
+
+    "automation-workflows": {
+      title: "Automation Workflows",
       category: "Automation",
-      description: "Built advanced AI automation workflows for client outreach, intelligent messaging, follow-ups, and operational automation using AI-driven response generation and multi-node execution systems.",
-      tech: ["n8n", "LLMs", "AI Agents", "Workflows", "APIs"],
-      github: "https://github.com/lightcode01-oss/AI-Workflow",
-      challenges: "Handling rate limits, complex conditional logic, and state management across hundreds of concurrent webhook triggers and LLM processing chains.",
+      description:
+        "Built advanced workflow automation pipelines using n8n for API integrations, automated operations, intelligent execution flows, and scalable business automation systems.",
+      tech: ["n8n", "APIs", "Workflow Automation", "AI Agents", "Integrations"],
+      github: "https://github.com/lightcode01-oss/AI_Workflow",
+      challenges:
+        "Handling complex automation logic, webhook orchestration, API rate limitations, and scalable workflow execution across multiple integrated systems.",
       icon: <Server className="w-12 h-12 text-violet-400" />
     },
-    "food-delivery-ecosystem": {
-      title: "AI-Powered Food Delivery Ecosystem",
+
+    "food-delivery-platform": {
+      title: "Food Delivery Platform",
       category: "Full Stack",
-      description: "Developed a scalable food delivery ecosystem integrating AI meal recommendations, real-time order tracking, cloud kitchen workflows, contactless delivery systems, live chat support, and eco-friendly operational infrastructure.",
-      tech: ["HTML", "CSS", "SCSS", "Java Script", "MongoDB", "Python"],
-      github: "https://github.com/lightcode01-oss/food-delivery",
-      challenges: "Maintaining sub-second latency for live order tracking using WebSockets while running computationally heavy AI recommendation algorithms in the background.",
+      description:
+        "Developed a modern food delivery platform featuring responsive frontend architecture, scalable backend integration, real-time operational workflows, and optimized user experience systems.",
+      tech: ["HTML", "CSS", "SCSS", "JavaScript", "Python"],
+      github: "https://github.com/lightcode01-oss/foods-delivery",
+      challenges:
+        "Building responsive real-time frontend systems while maintaining optimized backend communication and scalable operational workflows for delivery management.",
       icon: <LayoutTemplate className="w-12 h-12 text-blue-400" />
     },
-    "ai-saas-platform": {
-      title: "AI SaaS Subscription & Access Control Platform",
+
+    "gdg-hackathon-project": {
+      title: "GDG Hackathon Project",
       category: "Full Stack",
-      description: "Created a secure SaaS infrastructure with subscription management, premium AI feature access control, payment integration, user authentication, and scalable permission-based system architecture.",
-      tech: ["Next.js", "Firebase", "Authentication", "Payments", "Node.js"],
-      github: "https://github.com/lightcode01-oss/AI-SaaS",
-      challenges: "Ensuring 100% secure webhook processing for payment integration and building a flexible role-based access control (RBAC) system.",
+      description:
+        "Built a scalable hackathon solution focused on modern UI/UX, frontend responsiveness, real-world functionality, and efficient API integration under rapid development timelines.",
+      tech: ["JavaScript", "React", "APIs", "Modern Web Technologies"],
+      github: "https://github.com/lightcode01-oss/GDG_HACKATHON",
+      challenges:
+        "Developing and deploying a scalable full-stack solution within limited hackathon timelines while maintaining performance, responsiveness, and integration stability.",
+      icon: <LayoutTemplate className="w-12 h-12 text-sky-400" />
+    },
+
+    "esp32-iot-automation": {
+      title: "ESP-32 IoT Automation System",
+      category: "IoT & Automation",
+      description:
+        "Created an ESP-32 based automation system for real-time device communication, IoT operations, wireless control systems, and smart hardware integration workflows.",
+      tech: ["C++", "ESP-32", "IoT", "Hardware Automation", "Embedded Systems"],
+      github: "https://github.com/lightcode01-oss/ESP-32-Project",
+      challenges:
+        "Optimizing hardware memory management, maintaining stable wireless communication, and ensuring reliable automation execution in constrained embedded environments.",
       icon: <Cpu className="w-12 h-12 text-emerald-400" />
-    },
-    "edtech-automation": {
-      title: "Educational Content Automation System",
-      category: "Automation",
-      description: "Developed AI-assisted educational systems for generating structured notes, previous-year questions, formula roadmaps, and academic resources focused on scalable learning workflows and exam preparation.",
-      tech: ["Python", "OCR", "PDF Automation", "EdTech", "AI"],
-      github: "https://github.com/lightcode01-oss/EdTech-Automation",
-      challenges: "Designing robust OCR pipelines capable of reading complex mathematical formulas and poorly scanned PDFs with high accuracy.",
-      icon: <Server className="w-12 h-12 text-orange-400" />
-    },
-    "ai-chatbot-monetization": {
-      title: "AI Chatbot Platform with Monetization",
-      category: "AI & ML",
-      description: "Built a customizable AI chatbot platform with integrated payment systems, premium feature unlocking, user-based access control, and scalable monetization infrastructure for AI-powered applications.",
-      tech: ["AI APIs", "Payment", "SaaS Logic", "Custom UI", "Next.js"],
-      github: "https://github.com/lightcode01-oss/AI-Chatbot",
-      challenges: "Managing conversational context length efficiently to minimize API token costs while maintaining high-quality responses.",
-      icon: <LayoutTemplate className="w-12 h-12 text-rose-400" />
     }
+
+
   }[slug] || {
     title: "Project Not Found",
     category: "Unknown",

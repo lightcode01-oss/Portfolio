@@ -9,7 +9,7 @@ import { FileText, ArrowRight } from 'lucide-react';
 function TiltCard({ children, className }: { children: React.ReactNode, className?: string }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  
+
   const mouseXSpring = useSpring(x, { stiffness: 150, damping: 20 });
   const mouseYSpring = useSpring(y, { stiffness: 150, damping: 20 });
 
@@ -49,15 +49,15 @@ function TiltCard({ children, className }: { children: React.ReactNode, classNam
 
 export default function AboutPage() {
   const milestones = [
-    { year: "2023", title: "BCA with AI & ML", desc: "Pursuing Bachelor of Computer Applications with a strict specialization in Artificial Intelligence and Machine Learning algorithms." },
-    { year: "2024", title: "Founded Tech Magnitude", desc: "Launched a digital solutions startup to build AI-powered systems, modern websites, and intelligent automation workflows for businesses." },
+    { year: "2025", title: "BCA with AI & ML", desc: "Pursuing Bachelor of Computer Applications with a strict specialization in Artificial Intelligence and Machine Learning algorithms." },
+    { year: "2025", title: "Founded Tech Magnitude", desc: "Launched a digital solutions startup to build AI-powered systems, modern websites, and intelligent automation workflows for businesses." },
     { year: "2025", title: "Advanced Automation", desc: "Developed large-scale chatbot systems, lead management solutions, and WhatsApp automation for startups and local businesses." },
     { year: "2026", title: "Future Ecosystems", desc: "Building scalable AI-driven digital products and autonomous ecosystems to transition businesses into the AI era." }
   ];
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 sm:px-12 max-w-[90rem] mx-auto overflow-x-hidden">
-      
+
       {/* Massive Split Header */}
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-32 relative z-10">
         <motion.div
@@ -74,7 +74,7 @@ export default function AboutPage() {
             About Me.
           </h1>
           <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-4xl leading-relaxed text-balance">
-            I am an aspiring AI Engineer, automation developer, and the founder of <strong className="text-white">Tech Magnitude</strong>. 
+            I am an aspiring AI Engineer, automation developer, and the founder of <strong className="text-white">Tech Magnitude</strong>.
             I operate at the intersection of artificial intelligence, intelligent automation, full-stack development, and business systems design to create incredibly scalable digital experiences.
           </p>
         </motion.div>
@@ -84,12 +84,12 @@ export default function AboutPage() {
           <TiltCard className="w-full aspect-[4/5] md:aspect-square relative rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(52,211,153,0.15)] group">
             <div className="absolute inset-0 bg-[#050505] z-0" />
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/20 z-10 opacity-50 mix-blend-overlay pointer-events-none" />
-            <Image 
-              src="/profile.jpg" 
-              alt="Abhinav Dash - Founder" 
-              fill 
+            <Image
+              src="/profile.jpg"
+              alt="Abhinav Dash - Founder"
+              fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover relative z-0 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-110" 
+              className="object-cover relative z-0 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700 ease-out scale-105 group-hover:scale-110"
               style={{ objectPosition: "center 15%" }}
             />
             <div className="absolute inset-0 border-[2px] border-white/5 rounded-[3rem] z-20 pointer-events-none" />
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
       {/* Career Timeline */}
       <div className="space-y-16 relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -110,7 +110,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ perspective: 1000 }}>
           {milestones.map((milestone, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export default function AboutPage() {
       {/* Core Philosophy & Call to Action */}
       <div style={{ perspective: 1200 }}>
         <TiltCard className="mt-40 mb-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -142,14 +142,14 @@ export default function AboutPage() {
           >
             <div className="absolute inset-0 bg-grid-white opacity-[0.02] pointer-events-none" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
-            
+
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight max-w-5xl tracking-tight text-balance relative z-10">
               "My long-term goal is to build intelligent AI ecosystems and next-generation autonomous platforms that transform how businesses and people interact with technology."
             </h3>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 relative z-10">
-              <Link 
-                href="/resume.pdf" 
+              <Link
+                href="Abhinav_Dash_Resume_final.pdf"
                 target="_blank"
                 className="group relative flex items-center justify-center gap-3 px-8 py-4 bg-emerald-500 text-black font-semibold rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95 w-full sm:w-auto"
               >
@@ -159,9 +159,9 @@ export default function AboutPage() {
                 </span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
               </Link>
-              
-              <Link 
-                href="/contact" 
+
+              <Link
+                href="/contact"
                 className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/5 text-white font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto"
               >
                 <span>Get in Touch</span>
